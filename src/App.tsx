@@ -9,8 +9,8 @@ function App() {
     <div className="pagewrapper">
       <div className="header">
         <div className="header__intronav">
-          <h1>Sean Kempt</h1>
-          <h2>Full Stack Developer</h2>
+          <h1 className='header__intronav--name'>Sean Kempt</h1>
+          <h2 className='header__intronav--role'>Full Stack Developer</h2>
           <ul className='header__nav'>
             <li>About Me</li>
             <li>Projects</li>
@@ -22,7 +22,7 @@ function App() {
       <h2 className='aboutme__title'>About Me</h2>
         <p className="aboutme__intro">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus natus eius expedita deserunt, qui eveniet, reprehenderit autem libero quam sed ipsam doloribus, ad odio aliquid perspiciatis laudantium ea minima modi?
         Dolor quo soluta ullam blanditiis velit, ad distinctio recusandae natus consequuntur, nisi adipisci possimus consectetur magni reprehenderit labore pariatur laudantium, quam earum perferendis error facilis ipsa? Ex fugit totam eaque?
-        Voluptatem nesciunt quibusdam amet, ipsam distinctio officia non aut blanditiis, ratione ex temporibus fuga dicta placeat explicabo!.</p>
+        Voluptatem nesciunt quibusdam amet, ipsam distinctio officia non aut blanditiis, ratione ex temporibus fuga dicta placeat explicabo!</p>
       </div>
       <div className="projects">
         <h2 className="projects__title">Projects</h2>
