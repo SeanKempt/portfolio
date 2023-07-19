@@ -87,14 +87,18 @@ function App() {
       </div>
       <form id="contactme" className="section contactme">
         <h2 className="contactme__title">Contact Me</h2>
-        <label htmlFor="email">
-          Email
-          <input id="email" name="email" type="text" />
-        </label>
-        <label htmlFor="message">
-          Message
-          <textarea name="message" id="message" rows={6} cols={50} />
-        </label>
+        <div>
+          <label htmlFor="email">
+            Email
+            <input id="email" name="email" type="text" />
+          </label>
+        </div>
+        <div>
+          <label htmlFor="message">
+            Message
+            <textarea name="message" id="message" rows={6} cols={50} />
+          </label>
+        </div>
       </form>
       <div className="socials">
         <a className="socials__logo" target="_blank" href="https://github.com/SeanKempt?tab=repositories" rel="noreferrer">

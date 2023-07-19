@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
 
 :root {
-  --main-bg-color: #FFFFFF;
+  --main-bg-color: #ffffff;
   --fc-color: #474747;
-  --accent-color: #00C896;
+  --accent-color: #00c896;
+}
+
+@media screen and (min-width: 1400px) {
+  .projectcard {
+    flex-direction: column;
+  }
+  .projectcard__title {
+    text-align: center;
+  }
 }
 
 body {
@@ -43,7 +52,7 @@ body {
 }
 
 .header__nav > li {
-  padding: .25rem
+  padding: 0.25rem;
 }
 
 .aboutme {
@@ -145,23 +154,25 @@ body {
   border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 15px 25px rgba(129, 124, 124, 0.2);
-  -moz-transition: .75s;
-  -webkit-transition: .75s;
-  -o-transition: .75s;
-  transition: .75s;
+  -moz-transition: 0.75s;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectcard:hover {
   transform: scale(1.1, 1.1);
   transition: transform 0.3s ease-in;
-  
 }
 
 .projectcard__image {
   width: 100%;
   max-width: 400px;
-  height: auto;
-  border-radius: 15px;
+  height: 50%;
+  border-radius: 5%;
+  margin-bottom: 2rem;
 }
 
 .projectcard__info {
