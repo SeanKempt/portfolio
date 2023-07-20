@@ -1,3 +1,4 @@
+import {useState, useEffect} from 'react';
 import ProjectCard from './components/ProjectCard';
 import githublogo from './images/logo-github.svg';
 import linkedinlogo from './images/logo-linkedin.svg';
@@ -5,6 +6,19 @@ import emailicon from './images/mail-outline.svg';
 import projectCardInfo from './assets/projectCardInfo';
 
 function App() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  const handleResize = () => {
+    if (window.innerWidth < 720) {
+      setIsMobile(true)
+     } else {
+      setIsMobile(false)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleResize)
+  })
+
   return (
     <div className="pagewrapper">
       <div className="header">
@@ -42,6 +56,7 @@ function App() {
               title={card.title}
               description={card.description}
               image={card.image}
+              isMobile={isMobile}
             />
           ))}
         </div>
