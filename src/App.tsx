@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import ProjectCard from './components/ProjectCard';
 import githublogo from './images/logo-github.svg';
 import linkedinlogo from './images/logo-linkedin.svg';
@@ -6,34 +5,6 @@ import emailicon from './images/mail-outline.svg';
 import projectCardInfo from './assets/projectCardInfo';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('');
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const handleScroll = () => {
-    const sections = document.querySelectorAll<HTMLElement>('.section');
-
-    let currentSection: string | null = '';
-
-    sections.forEach((section) => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.offsetHeight;
-
-      if (
-        window.scrollY >= sectionTop - 50
-        && window.scrollY < sectionTop + sectionHeight - 50
-      ) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-    console.log('Active Section:', currentSection);
-    setActiveSection(currentSection);
-  };
   return (
     <div className="pagewrapper">
       <div className="header">
@@ -41,27 +12,17 @@ function App() {
           <h1 className="header__intronav--name">Sean Kempt</h1>
           <h2 className="header__intronav--role">Full Stack Developer</h2>
           <ul className="header__nav">
-            <li
-              className={activeSection === 'aboutme' ? 'navbar-highlight' : ''}
-            >
-              About Me
+            <li><a href="#aboutme">About me</a></li>
+            <li>
+              <a href="#projects">Projects</a>
             </li>
-            <li
-              className={activeSection === 'projects' ? 'navbar-highlight' : ''}
-            >
-              Projects
-            </li>
-            <li
-              className={
-                activeSection === 'contactme' ? 'navbar-highlight' : ''
-              }
-            >
-              Contact Me
+            <li>
+              <a href="#contactme">Contact Me</a>
             </li>
           </ul>
         </div>
       </div>
-      <div id="aboutme" className="section aboutme">
+      <div id="aboutme" className="aboutme">
         <h2 className="aboutme__title">About Me</h2>
         <p className="aboutme__intro">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
@@ -73,7 +34,7 @@ function App() {
           nulla et alias dolor, ratione adipisci vel saepe!
         </p>
       </div>
-      <div id="projects" className="section projects">
+      <div id="projects" className="projects">
         <h2 className="projects__title">Projects</h2>
         <div className="projects__grid-container">
           {projectCardInfo.map((card) => (
@@ -85,20 +46,20 @@ function App() {
           ))}
         </div>
       </div>
-      <form id="contactme" className="section contactme">
+      <form id="contactme" className="contactme">
         <h2 className="contactme__title">Contact Me</h2>
-        <div>
-          <label htmlFor="email">
-            Email
-            <input id="email" name="email" type="text" />
-          </label>
-        </div>
-        <div>
-          <label htmlFor="message">
-            Message
-            <textarea name="message" id="message" rows={6} cols={50} />
-          </label>
-        </div>
+          <div>
+            <label htmlFor="email" className='contactme__email'>
+              Email
+              <input id="email" name="email" type="text" />
+            </label>
+          </div>
+          <div>
+            <label htmlFor="message" className='contactme__message'>
+              Message
+              <textarea name="message" id="message" rows={5} cols={40} />
+            </label>
+          </div>
       </form>
       <div className="socials">
         <a className="socials__logo" target="_blank" href="https://github.com/SeanKempt?tab=repositories" rel="noreferrer">
