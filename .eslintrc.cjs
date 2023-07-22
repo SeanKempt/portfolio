@@ -11,6 +11,7 @@ module.exports = {
     'airbnb/hooks',
     'airbnb-typescript',
     'plugin:react/jsx-runtime',
+    'wesbos/typescript',
   ],
   plugins: ['@typescript-eslint'],
   rules: {
@@ -43,7 +44,12 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['vite.config.ts', '.eslintrc.cjs', 'tailwind.config.js', 'postcss.config.js'],
+      files: [
+        'vite.config.ts',
+        '.eslintrc.cjs',
+        'tailwind.config.js',
+        'postcss.config.js',
+      ],
       parserOptions: {
         parser: '@typescript-eslint/parser',
         project: './tsconfig.node.json',

@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/comma-dangle */
-import React from 'react';
 import ReactDOM from 'react-dom/client';
+import React from 'react';
 import App from './App';
 import './styles/reset.css';
 import './styles/index.css';

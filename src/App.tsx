@@ -1,95 +1,72 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import ProjectCard from './components/ProjectCard';
 import githublogo from './images/logo-github.svg';
 import linkedinlogo from './images/logo-linkedin.svg';
 import emailicon from './images/mail-outline.svg';
 import projectCardInfo from './assets/projectCardInfo';
+import introInfo from './assets/introInfo';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handleResize = () => {
     if (window.innerWidth < 720) {
-      setIsMobile(true)
-     } else {
-      setIsMobile(false)
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
     }
-  }
+  };
   useEffect(() => {
-    window.addEventListener("resize", handleResize)
-  })
+    window.addEventListener('resize', handleResize);
+  });
 
   return (
-    <div className="pagewrapper">
-      <div className="header">
-        <div className="header__intronav">
-          <h1 className="header__intronav--name">Sean Kempt</h1>
-          <h2 className="header__intronav--role">Full Stack Developer</h2>
-          <ul className="header__nav">
-            <li><a href="#aboutme">About me</a></li>
-            <li>
-              <a href="#projects">Projects</a>
-            </li>
-            <li>
-              <a href="#contactme">Contact Me</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div id="aboutme" className="aboutme">
-        <h2 className="aboutme__title">About Me</h2>
-        <p className="aboutme__intro">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
-          officiis ducimus odit magnam, vero molestiae maiores provident enim
-          fuga sed, esse sunt porro laborum iste nesciunt, expedita facere est
-          exercitationem? Exercitationem officia incidunt quod ipsa tempore
-          sapiente adipisci dolorum, cupiditate, at praesentium alias veritatis,
-          iste eligendi. Ad necessitatibus similique consequatur quae, itaque
-          nulla et alias dolor, ratione adipisci vel saepe!
-        </p>
-      </div>
-      <div id="projects" className="projects">
-        <h2 className="projects__title">Projects</h2>
-        <div className="projects__grid-container">
-          {projectCardInfo.map((card) => (
-            <ProjectCard
-              title={card.title}
-              description={card.description}
-              image={card.image}
-              isMobile={isMobile}
-            />
-          ))}
-        </div>
-      </div>
-      <form id="contactme" className="contactme">
-        <h2 className="contactme__title">Contact Me</h2>
-          <div>
-            <label htmlFor="email" className='contactme__email'>
-              Email
-              <input id="email" name="email" type="text" />
-            </label>
-          </div>
-          <div>
-            <label htmlFor="message" className='contactme__message'>
-              Message
-              <textarea name="message" id="message" rows={5} cols={40} />
-            </label>
-          </div>
-      </form>
-      <div className="socials">
-        <a className="socials__logo" target="_blank" href="https://github.com/SeanKempt?tab=repositories" rel="noreferrer">
-          <img src={githublogo} alt="Github logo" />
-        </a>
-        <a className="socials__logo" target="_blank" href="https://www.linkedin.com/in/sean-kempt-012739126/" rel="noreferrer">
-          <img src={linkedinlogo} alt="LinkedIn logo" />
-        </a>
-        <a className="socials__logo" target="_blank" href="kempt101@gmail.com">
-          <img src={emailicon} alt="Email logo" />
-        </a>
-      </div>
-      <div className="footer">
+    <div className="pagewrapper container mx-auto">
+      <header>
+        <nav>
+          <a href="#about" className="nav__aboutme">
+            About
+          </a>
+          <a href="#projects" className="nav__projects">
+            Projects
+          </a>
+          <a href="#contact" className="nav__contact">
+            Contact
+          </a>
+        </nav>
+      </header>
+      <main>
+        <section className="main__intro">
+          <p>Hi, my name is</p>
+          <h1>Sean Kempt.</h1>
+          <p>
+            I'm a self-taught Software Developer. Currently I'm looking for new
+            opportunities to cultivate my skills and be a strong asset to a
+            team.
+          </p>
+        </section>
+        <section className="main__aboutme">
+          <h2>About Me</h2>
+          <p>{introInfo.aboutme}</p>
+          <p>{introInfo.hobbies}</p>
+          <p>Here are a few technologies i'm familiar with:</p>
+        </section>
+        <section className="projects">
+          <h2>Some Things I've Built</h2>
+        </section>
+        <section className="main__contact">
+          <h2>What's next?</h2>
+          <h1>Get In Touch</h1>
+          <p>
+            Feel free to send me an email with any serious opportunities, or to
+            ask a question. I'll try and get back to you as soon as possible!
+          </p>
+        </section>
+      </main>
+      <footer>
         <p>Created by Sean Kempt</p>
-      </div>
+      </footer>
     </div>
   );
 }

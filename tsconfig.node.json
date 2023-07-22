@@ -3,8 +3,8 @@
     "composite": true,
     "skipLibCheck": true,
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowSyntheticDefaultImports": true
   },
-  "include": ["vite.config.ts", ".eslintrc.cjs"]
+  "include": ["vite.config.ts", ".eslintrc.cjs", "tailwind.config.js", "postcss.config.js"]
 }
