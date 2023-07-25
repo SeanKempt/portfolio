@@ -15,7 +15,7 @@ export default function ProjectCard({
 }: CardInfoProps): ReactElement {
   if (isMobile === false) {
     return (
-      <div className="projectcard grid grid-cols-2 gap-5">
+      <div className="projectcard grid grid-cols-2 gap-5 py-3">
         <img src={image} alt="testgif" className="projectcard__image rounded" />
         <div className="projectcard__info flex flex-col justify-center py-5">
           <h3 className="projectcard__title text-xl">{title}</h3>

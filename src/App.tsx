@@ -21,9 +21,9 @@ function App() {
   });
 
   return (
-    <div className="pagewrapper grid grid-cols-1 bg-teal-700 text-white">
-      <header className="header col-span-2 flex justify-between text-teal-300">
-        <h1>SK</h1>
+    <div className="pagewrapper">
+      <header className="header col-span-2 flex p-5 justify-between">
+        <h1 className="text-2xl">SK</h1>
         <nav>
           <a href="#about" className="nav__aboutme px-5">
             About
@@ -37,18 +37,21 @@ function App() {
         </nav>
       </header>
       <main className="maincontent grid grid-cols-2 mx-40 px-40 gap-10">
-        <section className="maincontent__intro col-span-2 h-screen flex flex-col justify-center mx-32">
-          <p className="text-base text-teal-300">Hi, my name is</p>
+        <section className="maincontent__intro col-span-2 h-screen flex flex-col justify-center mx-32 ">
+          <p className="text-base accenttext">Hi, my name is</p>
           <h1 className="text-7xl">Sean Kempt.</h1>
-          <p className="text-xl text-gray-800">
+          <p className="text-xl accenttext">
             I'm a self-taught Software Developer. Currently I'm looking for new
             opportunities to cultivate my skills and be a strong asset to a
             team.
           </p>
         </section>
         <section className="maincontent__aboutme h-screen col-span-2 grid grid-cols-2 items-center mx-32">
-          <div className="maincontent__aboutme--text text-gray-800">
-            <h2 className="text-4xl text-white">About Me</h2>
+          <div className="maincontent__aboutme--text">
+            <div className="flex items-center">
+              <h2 className="text-4xl pr-5 accenttext">About Me</h2>
+              <hr className="w-60" />
+            </div>
             <p className="text-xl py-3">
               Since I was a kid in school, I've been captivated by the
               ever-evolving world of technology. Over time, I've upskilled
@@ -71,7 +74,10 @@ function App() {
           <img src={githublogo} alt="" />
         </section>
         <section className="maincontent__projects col-span-2 h-screen mx-32">
-          <h2 className="text-4xl">Some Things I've Built</h2>
+          <div className="flex items-center">
+            <h2 className="text-4xl pr-5 accenttext">Some Things I've Built</h2>
+            <hr className="w-60" />
+          </div>
           <div className="maincontent__projects__container grid grid-cols-1 items-center gap-5">
             {projectCardInfo.map(
               (card): ReactNode => (
@@ -85,10 +91,12 @@ function App() {
             )}
           </div>
         </section>
-        <section className="maincontent__contact col-span-2 mx-32 flex flex-col justify-center">
-          <h1 className="text-4xl">What's next?</h1>
-          <h2 className="text-2xl text-center">Get In Touch</h2>
-          <p className="text-xl text-gray-800">
+        <section className="maincontent__contact col-span-2 mx-32 flex flex-col justify-center h-screen">
+          <div className="flex items-center">
+            <h1 className="text-4xl pr-5">Get In Touch</h1>
+            <hr className="w-60" />
+          </div>
+          <p className="text-xl ">
             Feel free to send me an email with any serious opportunities, or to
             ask a question. I'll try and get back to you as soon as possible!
           </p>
