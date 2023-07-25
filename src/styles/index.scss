@@ -18,8 +18,11 @@ $accent-color: #5AECC1;
 .header {
     color: $accent-color;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
-    position: sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: $primary-color;
 }
 
 .accenttext {

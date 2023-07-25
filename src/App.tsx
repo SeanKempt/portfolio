@@ -22,7 +22,10 @@ function App() {
 
   return (
     <div className="pagewrapper">
-      <header className="header col-span-2 flex p-5 justify-between">
+      <header
+        id="header"
+        className="header col-span-2 flex p-5 justify-between"
+      >
         <h1 className="text-2xl">SK</h1>
         <nav>
           <a href="#about" className="nav__aboutme px-5">
