@@ -1,9 +1,8 @@
 import { useState, useEffect, ReactNode } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import { LogoGithub, LogoLinkedin, MailOutline } from 'react-ionicons';
 import ProjectCard from './components/ProjectCard';
 import githublogo from './images/logo-github.svg';
-import linkedinlogo from './images/logo-linkedin.svg';
-import emailicon from './images/mail-outline.svg';
 import projectCardInfo from './assets/projectCardInfo';
 
 function App() {
@@ -39,6 +38,38 @@ function App() {
           </a>
         </nav>
       </header>
+      <ul className="socials w-10 fixed flex flex-col right-auto items-center left-5 bottom-0">
+        <li>
+          <a href="github.com">
+            <LogoGithub
+              color="#D5E6E5"
+              title="github"
+              width="3rem"
+              height="100%"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="linkedin.com">
+            <LogoLinkedin
+              color="#D5E6E5"
+              title="linkedin"
+              width="3rem"
+              height="100%"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="email">
+            <MailOutline
+              color="#D5E6E5"
+              title="mail"
+              width="3rem"
+              height="100%"
+            />
+          </a>
+        </li>
+      </ul>
       <main className="maincontent grid grid-cols-2 mx-40 px-40 gap-10">
         <section className="maincontent__intro col-span-2 h-screen flex flex-col justify-center mx-32 ">
           <p className="text-base accenttext">Hi, my name is</p>
@@ -85,6 +116,7 @@ function App() {
             {projectCardInfo.map(
               (card): ReactNode => (
                 <ProjectCard
+                  key={uuidv4()}
                   title={card.title}
                   description={card.description}
                   image={card.image}
