@@ -28,11 +28,13 @@ $accent-color: #5AECC1;
     color: $accent-color;
 }
 
-.socials::after {
-    content: "";
-    display: block;
-    width: 1px;
-    height: 60px;
-    margin: 0 auto;
-    background-color: $secondary-color;
+@media screen and (min-width: 1024px) {
+    .socials::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 60px;
+        margin: 0 auto;
+        background-color: $secondary-color;
+    }
 }

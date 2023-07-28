@@ -2,21 +2,21 @@ import testgif from '../images/testgif.jpg';
 
 const projectCardInfo = [
   {
-    title: 'Hello World',
+    title: 'Smart Fooder',
     description:
-      'Faucibus interdum posuere lorem ipsum dolor sit. Et malesuada fames ac turpis egestas integer eget. Sed id semper risus in hendrerit gravida rutrum quisque. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Ut sem nulla pharetra diam sit amet nisl. Lorem mollis aliquam ut porttitor leo a diam',
+      'Food Calorie App that helps you find fast food that fits your caloric budget.',
     image: testgif,
   },
   {
-    title: 'Here is another project',
+    title: 'Seddit - A Reddit Clone',
     description:
-      'Dui nunc mattis enim ut tellus elementum sagittis vitae et. Faucibus interdum posuere lorem ipsum dolor sit. Et malesuada fames ac turpis egestas integer eget. Sed id semper risus in hendrerit gravida rutrum quisque. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Ut sem nulla pharetra diam sit amet nisl. Lorem mollis aliquam ut porttitor leo a diam',
+      'Reddit clone that I created from scratch to help cultivate my development skills.',
     image: testgif,
   },
   {
-    title: 'Here is another project',
+    title: 'Mortal Kombat Photo Tagging Game',
     description:
-      'Dui nunc mattis enim ut tellus elementum sagittis vitae et. Faucibus interdum posuere lorem ipsum dolor sit. Et malesuada fames ac turpis egestas integer eget. Sed id semper risus in hendrerit gravida rutrum quisque. Est pellentesque elit ullamcorper dignissim cras tincidunt lobortis feugiat. Ut sem nulla pharetra diam sit amet nisl. Lorem mollis aliquam ut porttitor leo a diam',
+      'Mortal Kombat themed Wheres Waldo. Find all the characters to win',
     image: testgif,
   },
 ];
