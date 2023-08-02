@@ -37,8 +37,8 @@ function App() {
           </a>
         </nav>
       </header>
-      <main className="maincontent grid grid-cols-2 px-20 xl:mx-40 xl:px-40 gap-10">
-        <section className="maincontent__intro col-span-2 h-screen flex flex-col justify-center 2xl:mx-32 ">
+      <main className="maincontent  px-10 xl:mx-40 xl:px-40 gap-10 flex flex-col justify-center items-center">
+        <section className="maincontent__intro col-span-2 h-screen flex flex-col justify-center 2xl:mx-32 max-w-2xl ">
           <p className="text-base accenttext px-2">Hi, my name is</p>
           <h1 className="text-7xl">Sean Kempt.</h1>
           <p className="text-xl accenttext leading-7">
@@ -47,7 +47,10 @@ function App() {
             team.
           </p>
         </section>
-        <section className="maincontent__aboutme h-screen col-span-2 grid grid-cols-1 items-center 2xl:mx-32">
+        <section
+          id="about"
+          className="maincontent__aboutme h-screen col-span-2 grid grid-cols-1 items-center 2xl:mx-32 max-w-2xl"
+        >
           <div className="maincontent__aboutme--text">
             <div className="flex items-center">
               <h2 className="text-4xl pr-5 accenttext">About Me</h2>
@@ -78,7 +81,10 @@ function App() {
             <h2 className="text-4xl pr-5 accenttext">Some Things I've Built</h2>
             <hr className="w-60" />
           </div>
-          <div className="maincontent__projects__container grid grid-cols-1 items-center gap-5">
+          <div
+            id="projects"
+            className="maincontent__projects__container grid grid-cols-1 items-center gap-5 max-w-2xl"
+          >
             {projectCardInfo.map(
               (card): ReactNode => (
                 <ProjectCard
@@ -92,21 +98,28 @@ function App() {
             )}
           </div>
         </section>
-        <section className="maincontent__contact col-span-2 mx-32 flex flex-col justify-center h-screen">
+        <section
+          id="contact"
+          className="maincontent__contact col-span-2 flex flex-col justify-center h-screen 2xl:mx-32"
+        >
           <div className="flex items-center">
             <h1 className="text-4xl pr-5">Get In Touch</h1>
             <hr className="w-60" />
           </div>
-          <p className="text-xl ">
+          <p className="text-xl max-w-2xl ">
             Feel free to send me an email with any serious opportunities, or to
             ask a question. I'll try and get back to you as soon as possible!
           </p>
         </section>
-        <ul className="socials col-span-2 content-center justify-center flex row-start-5 row-end-6  items-center lg:left-5 lg:bottom-0 lg:fixed lg:right-auto lg:flex-col lg:w-10">
+        <ul className="socials col-span-2 content-center justify-center flex row-start-5 row-end-6  items-center xl:left-5 xl:bottom-0 xl:fixed xl:right-auto xl:flex-col xl:w-10">
           <li className="px-5 pb-5">
-            <a href="github.com">
+            <a
+              target="_blank"
+              href="https://github.com/SeanKempt"
+              rel="noreferrer"
+            >
               <LogoGithub
-                color="#D5E6E5"
+                color="#24990f"
                 title="github"
                 width="3rem"
                 height="100%"
@@ -114,9 +127,13 @@ function App() {
             </a>
           </li>
           <li className="px-5 pb-5">
-            <a href="linkedin.com">
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/sean-kempt-012739126/"
+              rel="noreferrer"
+            >
               <LogoLinkedin
-                color="#D5E6E5"
+                color="#24990f"
                 title="linkedin"
                 width="3rem"
                 height="100%"
@@ -124,9 +141,9 @@ function App() {
             </a>
           </li>
           <li className="px-5 pb-5">
-            <a href="email">
+            <a target="_blank" href="kempt101@gmail.comf">
               <MailOutline
-                color="#D5E6E5"
+                color="#24990f"
                 title="mail"
                 width="3rem"
                 height="100%"

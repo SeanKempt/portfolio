@@ -2,30 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
-$primary-color: #242D63;
-$secondary-color: #D5E6E5;
-$accent-color: #5AECC1;
+$primary-color: #24990f;
+$secondary-light-color: #b6f7f0;
+$accent-light-color: #30cc14;
+$background-light-color: #fefaff;
+$text-light-color: #100213;
+
+html {
+    scroll-behavior: smooth;
+}
 
 .pagewrapper {
-    background-color: $primary-color;
+    background-color: $background-light-color;
 }
 
 .maincontent{
-    color: $secondary-color;
+    color: $text-light-color;
 }
 
 .header {
-    color: $accent-color;
+    color: $text-light-color;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
     position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: $primary-color;
+    background-color: $background-light-color;
 }
 
 .accenttext {
-    color: $accent-color;
+    color: $accent-light-color;
+}
+
+.footer {
+    color: $text-light-color;
+}
+
+.projectcard__info {
+    background-color: $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -35,6 +50,19 @@ $accent-color: #5AECC1;
         width: 1px;
         height: 60px;
         margin: 0 auto;
-        background-color: $secondary-color;
+        background-color: $primary-color;
     }
 }
+
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20vh);
+    visibility: hidden;
+    transition: opacity 0.6s ease-out, transform 1.2s ease-out;
+    will-change: opacity, visibility;
+  }
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
