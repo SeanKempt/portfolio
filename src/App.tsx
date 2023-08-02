@@ -76,15 +76,15 @@ function App() {
             </p>
           </div>
         </section>
-        <section className="maincontent__projects col-span-2 h-screen 2xl:mx-32">
+        <section
+          id="projects"
+          className="maincontent__projects col-span-2 h-screen 2xl:mx-32"
+        >
           <div className="flex items-center">
             <h2 className="text-4xl pr-5 accenttext">Some Things I've Built</h2>
             <hr className="w-60" />
           </div>
-          <div
-            id="projects"
-            className="maincontent__projects__container grid grid-cols-1 items-center gap-5 max-w-2xl"
-          >
+          <div className="maincontent__projects__container grid grid-cols-1 items-center gap-5 max-w-2xl">
             {projectCardInfo.map(
               (card): ReactNode => (
                 <ProjectCard
